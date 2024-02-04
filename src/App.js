@@ -2,7 +2,7 @@ import './App.css'
 
 import { RouterProvider } from 'react-router'
 
-import Root from './pages/Root'
+import Root from './page/Root'
 import { createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
 const router = createBrowserRouter(createRoutesFromElements(Root), {
