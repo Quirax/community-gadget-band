@@ -26,7 +26,8 @@ function Root() {
     return (
         <>
             <h1>Root</h1>
-            <p>Test = {process.env.REACT_APP_TEST}</p>
+            <p>Client_ID = {process.env.REACT_APP_BAND_CLIENT_ID}</p>
+            <p>Client_SECRET = {process.env.REACT_APP_BAND_CLIENT_SECRET}</p>
         </>
     )
 }
