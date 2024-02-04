@@ -1,6 +1,6 @@
 {
-    "name": "band_frontend",
-    "version": "0.0.1",
+    "name": "community-gadget-band_frontend",
+    "version": "0.0.2",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
@@ -39,5 +39,6 @@
             "last 1 safari version"
         ]
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "license": "MIT"
 }
