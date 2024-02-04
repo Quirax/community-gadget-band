@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css'
 
 import { RouterProvider } from 'react-router'
@@ -24,7 +23,12 @@ const router = createBrowserRouter(
 )
 
 function Root() {
-    return <h1>Root</h1>
+    return (
+        <>
+            <h1>Root</h1>
+            <p>Test = {process.env.REACT_APP_TEST}</p>
+        </>
+    )
 }
 
 function App() {
