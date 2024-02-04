@@ -1,9 +1,10 @@
 import { Route } from 'react-router-dom'
-import { getAuthorizationCode } from '../api/auth'
+import { getAuthorizationCode, getTokensWithAuthCode } from '../api/auth'
 
-function loader() {
+async function loader() {
     const authCode = getAuthorizationCode()
-    console.debug('code', authCode)
+    const tokens = getTokensWithAuthCode(authCode)
+    console.debug(tokens)
     return null
 }
 
