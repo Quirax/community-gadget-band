@@ -3,8 +3,8 @@ import './App.css'
 
 import { RouterProvider } from 'react-router'
 
-import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
-import Root from './pages/Root'
+import Root from './page/Root'
+import { createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
 const router = createBrowserRouter(createRoutesFromElements(Root), {
     basename: process.env.PUBLIC_URL,
