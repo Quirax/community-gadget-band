@@ -1,46 +1,22 @@
 {
-    "name": "band",
-    "version": "0.0.1",
-    "private": true,
-    "homepage": "https://quirax.github.io/community-gadget-band",
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.17.0",
-        "@testing-library/react": "^13.4.0",
-        "@testing-library/user-event": "^13.5.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router": "^6.21.3",
-        "react-router-dom": "^6.21.3",
-        "react-scripts": "5.0.1",
-        "web-vitals": "^2.1.4"
-    },
+    "name": "community-gadget-band",
+    "version": "0.0.2",
+    "description": "밴드 커뮤니티 총괄진 가젯",
+    "main": "index.js",
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "backend": "cd backend && npm start",
+        "frontend": "cd frontend && npm start",
+        "start": "concurrently \"npm run backend\" \"npm run frontend\""
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "backend",
+        "frontend"
+    ],
     "devDependencies": {
-        "gh-pages": "^6.1.1"
+        "concurrently": "^8.2.2"
     }
 }
