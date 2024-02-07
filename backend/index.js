@@ -36,6 +36,10 @@ app.post('/push', (req, res) => {
         let buff = Buffer.from(data)
         console.log(buff.toString('utf-8'))
     })
+    deploySh.stderr.on('data', function (data) {
+        let buff = Buffer.from(data)
+        console.error(buff.toString('utf-8'))
+    })
 
     let data = JSON.stringify({ success: true })
     console.log('[LOG] success!!')
