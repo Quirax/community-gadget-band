@@ -27,7 +27,8 @@ COPY package*.json ./
 RUN npm install
 
 # Docker Demon Port Mapping
-EXPOSE 3000, 5000
+EXPOSE 3000
+EXPOSE 5000
 
 # Node ENV
 ENV NODE_ENV=production
