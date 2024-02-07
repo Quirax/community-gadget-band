@@ -9,8 +9,6 @@ dotenv.config() // .env 로드
 const PORT = process.env.PORT || 5000
 const secret = process.env.SECRET || ''
 
-console.info(secret)
-
 const app = express()
 
 app.use(bodyParser.json())
