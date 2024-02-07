@@ -23,7 +23,8 @@ RUN apk --no-cache add tzdata && \
 WORKDIR /app
 
 # Only copy the package.json file to work directory
-RUN npm install
+# COPY package*.json ./
+# RUN npm install
 
 # Docker Demon Port Mapping
 EXPOSE 3000
