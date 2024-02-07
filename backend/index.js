@@ -7,7 +7,9 @@ import crypto from 'crypto'
 dotenv.config() // .env 로드
 
 const PORT = process.env.PORT || 5000
-let secret = process.env.SECRET || ''
+const secret = process.env.SECRET || ''
+
+console.info(secret)
 
 const app = express()
 
@@ -31,7 +33,7 @@ app.post('/push', (req, res) => {
 
     let deploySh = spawn('sh', ['hook.sh'])
     deploySh.stdout.on('data', function (data) {
-        let buff = new ArrayBuffer(data)
+        let buff = Buffer.from(data)
         console.log(buff.toString('utf-8'))
     })
 
