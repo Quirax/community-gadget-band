@@ -27,8 +27,8 @@ WORKDIR /app
 
 # Only copy the package.json file to work directory
 COPY package.json ./
-RUN npm install
-RUN npm install --dev
+RUN npm i -s
+RUN npm i --save-dev
 
 # Docker Demon Port Mapping
 EXPOSE 3000
