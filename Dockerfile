@@ -27,6 +27,8 @@ WORKDIR /app
 
 # Only copy the package.json file to work directory
 COPY package.json ./
+COPY backend/package.json ./backend
+COPY frontend/package.json ./frontend
 RUN npm i -s
 RUN npm i --save-dev
 
