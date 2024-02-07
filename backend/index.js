@@ -49,5 +49,5 @@ app.get('/test', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.info(`Backend server is listening on port ${PORT}!`)
+    console.info(`Backend server is listening on port ${PORT}`)
 })
