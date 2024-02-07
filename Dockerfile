@@ -12,6 +12,7 @@ RUN apk add bash
 
 # git install
 RUN apk add git
+RUN git config --global --add safe.directory /app
 
 # Language
 ENV LANG=ko_KR.UTF-8 \
@@ -27,10 +28,18 @@ WORKDIR /app
 
 # Only copy the package.json file to work directory
 COPY package.json ./
-COPY backend/package.json ./backend
-COPY frontend/package.json ./frontend
+COPY backend/package.json ./backend/
+COPY frontend/package.json ./frontend/
 RUN npm i -s
 RUN npm i --save-dev
+RUN npm i -g nodemon
+# RUN cd backend
+# RUN npm i -s
+# RUN npm i --save-dev
+# RUN cd ../frontend
+# RUN npm i -s
+# RUN npm i --save-dev
+# RUN cd ..
 
 # Docker Demon Port Mapping
 EXPOSE 3000
