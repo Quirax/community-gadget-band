@@ -10,6 +10,9 @@ RUN fc-cache -f && rm -rf /var/cache/*
 # bash install
 RUN apk add bash
 
+# git install
+RUN apk add git
+
 # Language
 ENV LANG=ko_KR.UTF-8 \
     LANGUAGE=ko_KR.UTF-8
