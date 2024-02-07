@@ -33,13 +33,6 @@ COPY frontend/package.json ./frontend/
 RUN npm i -s
 RUN npm i --save-dev
 RUN npm i -g nodemon
-# RUN cd backend
-# RUN npm i -s
-# RUN npm i --save-dev
-# RUN cd ../frontend
-# RUN npm i -s
-# RUN npm i --save-dev
-# RUN cd ..
 
 # Docker Demon Port Mapping
 EXPOSE 3000
