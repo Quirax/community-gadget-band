@@ -6,7 +6,9 @@
     "scripts": {
         "backend": "cd backend && npm start",
         "frontend": "cd frontend && npm start",
-        "start": "concurrently \"npm run backend\" \"npm run frontend\""
+        "frontend_deploy": "cd frontend && npm run deploy",
+        "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+        "deploy": "concurrently \"npm run backend\" \"npm run frontend_deploy\""
     },
     "keywords": [],
     "author": "",
