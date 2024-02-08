@@ -27,12 +27,10 @@ RUN apk --no-cache add tzdata && \
 WORKDIR /app
 
 # Only copy the package.json file to work directory
-COPY package.json ./
-COPY backend/package.json ./backend/
-COPY frontend/package.json ./frontend/
-RUN npm i -s
-RUN npm i --save-dev
-RUN npm i -g nodemon
+COPY . /app
+RUN npm i
+RUN npm i --dev
+RUN npm i -g nodemon concurrently react-scripts serve
 
 # Docker Demon Port Mapping
 EXPOSE 3000
