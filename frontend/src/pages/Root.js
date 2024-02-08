@@ -4,7 +4,12 @@ import Login from './Login'
 import Main from './Main'
 
 function Page(props) {
-    return <h1>Root</h1>
+    return (
+        <>
+            <h1>Root</h1>
+            <p>와 이게 된다고?</p>
+        </>
+    )
 }
 
 export default (
