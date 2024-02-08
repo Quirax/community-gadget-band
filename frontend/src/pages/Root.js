@@ -7,7 +7,7 @@ function Page(props) {
     return (
         <>
             <h1>Root</h1>
-            <p>와 이게 된다고?</p>
+            <p>와 이게 된다!!!</p>
         </>
     )
 }
