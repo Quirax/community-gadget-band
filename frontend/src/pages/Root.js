@@ -6,7 +6,7 @@ function Page(props) {
     return (
         <>
             <h1>Root</h1>
-            <p>와 이게 된다!!!</p>
+            <p>와 이게 된답니다!!!</p>
         </>
     )
 }
@@ -17,7 +17,7 @@ export default (
             index
             element={<Page />}
             loader={async () => {
-                console.debug(await fetch(`${process.env.PUBLIC_URL}/api/test`))
+                console.debug((await fetch(`${process.env.PUBLIC_URL}/api/test`)).json())
                 return null
             }}
         />
