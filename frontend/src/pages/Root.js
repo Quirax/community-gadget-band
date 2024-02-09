@@ -1,6 +1,5 @@
 import { Route } from 'react-router-dom'
 
-import Login from './Login'
 import Main from './Main'
 
 function Page(props) {
@@ -22,7 +21,6 @@ export default (
                 return null
             }}
         />
-        {Login}
         {Main}
     </Route>
 )
