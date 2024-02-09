@@ -18,7 +18,7 @@ export default (
             index
             element={<Page />}
             loader={async () => {
-                console.debug(await fetch('/api/test'))
+                console.debug(await fetch(`${process.env.PUBLIC_URL}/api/test`))
                 return null
             }}
         />
